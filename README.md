@@ -1,27 +1,142 @@
 # NgPasswordy
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/georgipeltekov/ngx-file-drop/blob/master/LICENSE)
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+An angular +9 module that provides an input of type password with an eye icon to show/hide the visibility of the password. 
 
-## Code scaffolding
+It is fully compatible with reactive forms.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting started
 
-## Build
+```bash
+npm install ng-passwordy
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Import the 'NgPasswordy' module
 
-## Running unit tests
+```Typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgPasswordyModule } from 'ng-passwordy';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgPasswordyModule // <-- NgPasswordy Module 
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+### How to use with reactive forms?
 
-## Running end-to-end tests
+## Component 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```Typescript
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-## Further help
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent {
+  loginForm: FormGroup;
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  constructor(private formBuilder: FormBuilder) {
+    this.loginForm = this.formBuilder.group({
+      username: ['', [Validators.required]],
+      password: ['', [Validators.required]],
+    });
+  }
+
+  login(event: Event): void {
+    alert(
+      `You have logged in: \nUser: ${
+        this.loginForm.get('username').value
+      }\nPassword: ${this.loginForm.get('password').value}`
+    );
+  }
+}
+```
+
+## Template
+
+```HTML
+<div class="app-component">
+  <form [formGroup]="loginForm" (ngSubmit)="login($event)">
+    <fieldset>
+      <legend>Login Form</legend>
+      <div class="form-section">
+        <label id="user" for="username">User</label>
+        <input
+          type="text"
+          id="username"
+          formControlName="username"
+          placeholder="User"
+        />
+      </div>
+      <div class="form-section">
+        <label id="user" for="username">Password</label>
+        <!--
+          Use the component with common reactive forms attributes such as formControlName
+        -->
+        <ng-passwordy
+          formControlName="password"
+          placeholder="Password"
+          inputId="password"
+        ></ng-passwordy>
+      </div>
+      <div>
+        <button type="submit">Login</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+```
+
+## Styles
+
+```SCSS
+.app-component {
+  margin: 20px;
+}
+
+.form-section {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  label {
+    margin-right: 10px;
+  }
+}
+```
+
+## Notes
+
+Make sure to include "node_modules/material-design-icons/iconfont/material-icons.css" in your angular json so that the eye icon is loaded properly
+
+## Properties
+
+Name  | Description | Default Value
+------------- | ------------- | -------------
+maxLength  | The maximum number of characters allowed in the input | 50
+placeholder  | The placeholder for the input | 'Password'
+inputId  | The id to use for the input | 'password'
+
+## License
+
+[MIT](/LICENSE)
