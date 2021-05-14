@@ -1,4 +1,4 @@
-# NgPasswordy
+# NgxPasswordy
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/georgipeltekov/ngx-file-drop/blob/master/LICENSE)
 
@@ -14,7 +14,7 @@ It is fully compatible with reactive forms.
 npm install ngx-passwordy
 ```
 
-### Import the 'NgPasswordy' module
+### Import the 'NgxPasswordy' module
 
 ```Typescript
 import { BrowserModule } from '@angular/platform-browser';
