@@ -11,7 +11,7 @@ It is fully compatible with reactive forms.
 ## Getting started
 
 ```bash
-npm install ng-passwordy
+npm install ngx-passwordy
 ```
 
 ### Import the 'NgPasswordy' module
@@ -21,7 +21,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgPasswordyModule } from 'ng-passwordy';
+import { NgPasswordyModule } from 'ngx-passwordy';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { NgPasswordyModule } from 'ng-passwordy';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    NgPasswordyModule // <-- NgPasswordy Module 
+    NgxPasswordyModule // <-- NgxPasswordy Module 
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -92,11 +92,11 @@ export class AppComponent {
         <!--
           Use the component with common reactive forms attributes such as formControlName
         -->
-        <ng-passwordy
+        <ngx-passwordy
           formControlName="password"
           placeholder="Password"
           inputId="password"
-        ></ng-passwordy>
+        ></ngx-passwordy>
       </div>
       <div>
         <button type="submit">Login</button>
@@ -127,7 +127,7 @@ export class AppComponent {
 
 ## Notes
 
-Make sure to include "node_modules/material-design-icons/iconfont/material-icons.css" in your angular json so that the eye icon is loaded properly
+Make sure to include "node_modules/material-design-icons/iconfont/material-icons.css" in your angular json so that the eye icon is loaded properly.
 
 ## Properties
 

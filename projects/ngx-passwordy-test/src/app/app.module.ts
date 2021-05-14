@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgPasswordyModule } from 'ng-passwordy';
+import { NgxPasswordyModule } from 'ngx-passwordy';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { NgPasswordyModule } from 'ng-passwordy';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    NgPasswordyModule
+    NgxPasswordyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

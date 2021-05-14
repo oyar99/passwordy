@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "ng-passwordy": [
-        "dist/ng-passwordy/ng-passwordy",
-        "dist/ng-passwordy"
+      "ngx-passwordy": [
+        "dist/ngx-passwordy/ngx-passwordy",
+        "dist/ngx-passwordy"
       ]
     }
   },

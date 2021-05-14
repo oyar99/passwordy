@@ -3,18 +3,18 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export const PASSWORDY_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => NgPasswordyComponent),
+  useExisting: forwardRef(() => NgxPasswordyComponent),
   multi: true,
 };
 
 @Component({
-  selector: 'ng-passwordy',
-  templateUrl: './ng-passwordy.component.html',
-  styleUrls: ['./ng-passwordy.component.scss'],
+  selector: 'ngx-passwordy',
+  templateUrl: './ngx-passwordy.component.html',
+  styleUrls: ['./ngx-passwordy.component.scss'],
   encapsulation: ViewEncapsulation.None,
   providers: [PASSWORDY_VALUE_ACCESSOR]
 })
-export class NgPasswordyComponent
+export class NgxPasswordyComponent
   implements OnInit, AfterViewInit, OnDestroy, ControlValueAccessor
 {
   onChange = (_: any) => {};

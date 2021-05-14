@@ -1,5 +1,5 @@
 {
-  "name": "ng-passwordy",
+  "name": "ngx-passwordy",
   "version": "0.0.2",
   "scripts": {
     "ng": "ng",
@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "lib:build": "ng build ng-passwordy --prod",
-    "lib:publish": "cd dist/ng-passwordy && npm publish"
+    "lib:build": "ng build ngx-passwordy --prod",
+    "lib:publish": "cd dist/ngx-passwordy && npm publish"
   },
   "private": true,
   "dependencies": {

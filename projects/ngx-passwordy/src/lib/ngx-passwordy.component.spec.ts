@@ -1,20 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { NgPasswordyComponent } from './ng-passwordy.component';
+import { NgxPasswordyComponent } from './ngx-passwordy.component';
 
 describe('NgPasswordyComponent', () => {
-  let component: NgPasswordyComponent;
-  let fixture: ComponentFixture<NgPasswordyComponent>;
+  let component: NgxPasswordyComponent;
+  let fixture: ComponentFixture<NgxPasswordyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgPasswordyComponent ]
+      declarations: [ NgxPasswordyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgPasswordyComponent);
+    fixture = TestBed.createComponent(NgxPasswordyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

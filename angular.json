@@ -3,38 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-passwordy": {
+    "ngx-passwordy": {
       "projectType": "library",
-      "root": "projects/ng-passwordy",
-      "sourceRoot": "projects/ng-passwordy/src",
+      "root": "projects/ngx-passwordy",
+      "sourceRoot": "projects/ngx-passwordy/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ng-passwordy/tsconfig.lib.json",
-            "project": "projects/ng-passwordy/ng-package.json"
+            "tsConfig": "projects/ngx-passwordy/tsconfig.lib.json",
+            "project": "projects/ngx-passwordy/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-passwordy/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-passwordy/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-passwordy/src/test.ts",
-            "tsConfig": "projects/ng-passwordy/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-passwordy/karma.conf.js"
+            "main": "projects/ngx-passwordy/src/test.ts",
+            "tsConfig": "projects/ngx-passwordy/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-passwordy/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ng-passwordy/tsconfig.lib.json",
-              "projects/ng-passwordy/tsconfig.spec.json"
+              "projects/ngx-passwordy/tsconfig.lib.json",
+              "projects/ngx-passwordy/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -43,32 +43,32 @@
         }
       }
     },
-    "ng-passwordy-test": {
+    "ngx-passwordy-test": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/ng-passwordy-test",
-      "sourceRoot": "projects/ng-passwordy-test/src",
+      "root": "projects/ngx-passwordy-test",
+      "sourceRoot": "projects/ngx-passwordy-test/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-passwordy-test",
-            "index": "projects/ng-passwordy-test/src/index.html",
-            "main": "projects/ng-passwordy-test/src/main.ts",
-            "polyfills": "projects/ng-passwordy-test/src/polyfills.ts",
-            "tsConfig": "projects/ng-passwordy-test/tsconfig.app.json",
+            "outputPath": "dist/ngx-passwordy-test",
+            "index": "projects/ngx-passwordy-test/src/index.html",
+            "main": "projects/ngx-passwordy-test/src/main.ts",
+            "polyfills": "projects/ngx-passwordy-test/src/polyfills.ts",
+            "tsConfig": "projects/ngx-passwordy-test/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "projects/ng-passwordy-test/src/favicon.ico",
-              "projects/ng-passwordy-test/src/assets"
+              "projects/ngx-passwordy-test/src/favicon.ico",
+              "projects/ngx-passwordy-test/src/assets"
             ],
             "styles": [
-              "projects/ng-passwordy-test/src/styles.scss",
+              "projects/ngx-passwordy-test/src/styles.scss",
               "node_modules/material-design-icons/iconfont/material-icons.css"
             ],
             "scripts": []
@@ -77,8 +77,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/ng-passwordy-test/src/environments/environment.ts",
-                  "with": "projects/ng-passwordy-test/src/environments/environment.prod.ts"
+                  "replace": "projects/ngx-passwordy-test/src/environments/environment.ts",
+                  "with": "projects/ngx-passwordy-test/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -107,33 +107,33 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ng-passwordy-test:build"
+            "browserTarget": "ngx-passwordy-test:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ng-passwordy-test:build:production"
+              "browserTarget": "ngx-passwordy-test:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-passwordy-test:build"
+            "browserTarget": "ngx-passwordy-test:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-passwordy-test/src/test.ts",
-            "polyfills": "projects/ng-passwordy-test/src/polyfills.ts",
-            "tsConfig": "projects/ng-passwordy-test/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-passwordy-test/karma.conf.js",
+            "main": "projects/ngx-passwordy-test/src/test.ts",
+            "polyfills": "projects/ngx-passwordy-test/src/polyfills.ts",
+            "tsConfig": "projects/ngx-passwordy-test/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-passwordy-test/karma.conf.js",
             "assets": [
-              "projects/ng-passwordy-test/src/favicon.ico",
-              "projects/ng-passwordy-test/src/assets"
+              "projects/ngx-passwordy-test/src/favicon.ico",
+              "projects/ngx-passwordy-test/src/assets"
             ],
             "styles": [
-              "projects/ng-passwordy-test/src/styles.scss"
+              "projects/ngx-passwordy-test/src/styles.scss"
             ],
             "scripts": []
           }
@@ -142,9 +142,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ng-passwordy-test/tsconfig.app.json",
-              "projects/ng-passwordy-test/tsconfig.spec.json",
-              "projects/ng-passwordy-test/e2e/tsconfig.json"
+              "projects/ngx-passwordy-test/tsconfig.app.json",
+              "projects/ngx-passwordy-test/tsconfig.spec.json",
+              "projects/ngx-passwordy-test/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -154,16 +154,16 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/ng-passwordy-test/e2e/protractor.conf.js",
-            "devServerTarget": "ng-passwordy-test:serve"
+            "protractorConfig": "projects/ngx-passwordy-test/e2e/protractor.conf.js",
+            "devServerTarget": "ngx-passwordy-test:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ng-passwordy-test:serve:production"
+              "devServerTarget": "ngx-passwordy-test:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "ng-passwordy"
+  "defaultProject": "ngx-passwordy"
 }
