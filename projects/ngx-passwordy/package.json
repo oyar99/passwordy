@@ -1,6 +1,6 @@
 {
   "name": "ngx-passwordy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An angular +9 module that provides an input of type password with an eye icon to show/hide the visibility of the password. It's fully compatible with reactive forms",
   "license": "MIT",
   "author": "Jhon Rayo",

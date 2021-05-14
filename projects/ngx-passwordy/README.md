@@ -88,10 +88,7 @@ export class AppComponent {
         />
       </div>
       <div class="form-section">
-        <label id="user" for="username">Password</label>
-        <!--
-          Use the component with common reactive forms attributes such as formControlName
-        -->
+        <label id="user" for="password">Password</label>
         <ngx-passwordy
           formControlName="password"
           placeholder="Password"
