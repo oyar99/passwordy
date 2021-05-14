@@ -1,0 +1,27 @@
+{
+  "name": "ng-passwordy",
+  "version": "0.0.1",
+  "description": "An angular +9 module that provides an input of type password with an eye icon to show/hide the visibility of the password. It's fully compatible with reactive forms",
+  "license": "MIT",
+  "author": "Jhon Rayo",
+  "keywords": [
+    "angular",
+    "input",
+    "password"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^9.1.13",
+    "@angular/core": "^9.1.13",
+    "@angular/forms": "~9.1.0",
+    "@angular/cdk": "^9.2.4",
+    "@angular/material": "^9.2.4",
+    "material-design-icons": "^3.0.1"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JhonRayoCoder/passwordy.git"
+  }
+}

@@ -1,0 +1,14 @@
+.app-component {
+  margin: 20px;
+}
+
+.form-section {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  label {
+    margin-right: 10px;
+  }
+}

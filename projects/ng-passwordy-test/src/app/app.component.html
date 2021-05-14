@@ -1,0 +1,27 @@
+<div class="app-component">
+  <form [formGroup]="loginForm" (ngSubmit)="login($event)">
+    <fieldset>
+      <legend>Login Form</legend>
+      <div class="form-section">
+        <label id="user" for="username">User</label>
+        <input
+          type="text"
+          id="username"
+          formControlName="username"
+          placeholder="User"
+        />
+      </div>
+      <div class="form-section">
+        <label id="user" for="username">Password</label>
+        <ng-passwordy
+          formControlName="password"
+          placeholder="Password"
+          inputId="password"
+        ></ng-passwordy>
+      </div>
+      <div>
+        <button type="submit">Login</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
