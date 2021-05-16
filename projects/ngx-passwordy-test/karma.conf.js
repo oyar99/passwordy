@@ -27,12 +27,12 @@ module.exports = function (config) {
     autoWatch: true,
     singleRun: false,
     restartOnFileChange: true,
-    browsers: ['Chrome', 'ChromeHeadlessCI'],
+    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessCI'],
     customLaunchers: {
       ChromeHeadlessCI: {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
-    }
+    },
   });
 };
