@@ -4,8 +4,6 @@ name: Test Ngx-passwordy
 
 on:
   # Triggers the workflow on pull request events but only for the main branch
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
