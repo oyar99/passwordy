@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "lib:build": "ng build ngx-passwordy --prod",
     "lib:test": "ng test ngx-passwordy",
-    "lib:publish": "cd dist/ngx-passwordy && npm publish"
+    "lib:publish": "cd dist/ngx-passwordy && npm pack && npm publish"
   },
   "private": true,
   "dependencies": {
