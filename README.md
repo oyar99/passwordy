@@ -8,6 +8,10 @@ An angular +9 module that provides an input of type password with an eye icon to
 
 It is fully compatible with reactive forms.
 
+## Demo
+
+![passwordy-demo](https://user-images.githubusercontent.com/48707041/118684228-a801d780-b7c7-11eb-9203-6ab8ccc99355.gif)
+
 ## Getting started
 
 ```bash
